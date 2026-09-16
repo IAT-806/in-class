@@ -14,7 +14,6 @@ Right-click `index.html` → **Open with Live Server**. The turtle draws a squar
 | `turtle.js`   | The `KardunTurtle` class. You don't need to read it to use it — we come back to how classes are written in Week 4. |
 | `index.html`  | Loads p5 and the two scripts, in that order.                                                                       |
 | `turtle.jpg`  | The turtle's face. Replace it.                                                                                     |
-| `karduni.jpg` | The original photo `turtle.jpg` was cropped from.                                                                  |
 
 ## Give it instructions
 
