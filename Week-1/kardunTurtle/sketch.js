@@ -27,38 +27,6 @@ function giveInstructions() {
 
   // Press a face onto the canvas, so we can see where we started.
   turtle.stamp();
-
-  // A square, the long way round.
-  turtle.forward(180);
-  turtle.right(90);
-  turtle.forward(180);
-  turtle.right(90);
-  turtle.forward(180);
-  turtle.right(90);
-  turtle.forward(180);
-  turtle.right(90);
-
-  // Lift the pen, walk somewhere new, put it back down.
-  turtle.penUp();
-  turtle.right(90);
-  turtle.forward(260);
-  turtle.penDown();
-
-  // A triangle, turning the other way.
-  turtle.penColor("#4cc9f0");
-  turtle.forward(180);
-  turtle.left(120);
-  turtle.forward(180);
-  turtle.left(120);
-  turtle.forward(180);
-  turtle.left(120);
-
-  // Try this once you've met loops — same square, four lines shorter:
-  //
-  // turtle.repeat(4, function () {
-  //   turtle.forward(180);
-  //   turtle.right(90);
-  // });
 }
 
 function draw() {
