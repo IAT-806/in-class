@@ -110,7 +110,9 @@ You have a local sketch, a live preview, and a remote copy. Repeat steps 5–7 f
 
 ```js
 let img;
-function preload() { img = loadImage("cat.png"); }   // 1.x — never runs
+function preload() {
+  img = loadImage("cat.png");
+} // 1.x — never runs
 ```
 
 you write this instead:
@@ -119,7 +121,7 @@ you write this instead:
 let img;
 async function setup() {
   createCanvas(600, 400);
-  img = await loadImage("cat.png");                  // 2.x
+  img = await loadImage("cat.png"); // 2.x
 }
 ```
 

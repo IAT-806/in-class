@@ -27,6 +27,10 @@ function giveInstructions() {
 
   // Press a face onto the canvas, so we can see where we started.
   turtle.stamp();
+
+  turtle.forward(100);
+  turtle.right(45);
+  turtle.forward(200);
 }
 
 function draw() {
