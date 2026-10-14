@@ -10,7 +10,9 @@ let frames = [];
 let index = 0;
 
 // STEP 5: parallel arrays, one entry per animated dancer
+// this is the starting location of the daners
 let xs = [240, 440, 640];
+// this is their speed. 
 let speeds = [4, 8, 16]; // draw-frames per pose: smaller = faster
 
 async function setup() {
