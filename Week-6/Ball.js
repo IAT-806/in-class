@@ -17,9 +17,10 @@ class Ball {
     this.startFrame = frameCount;
     this.baseR = r;
     this.r = r;
+    this.origColor = fillColor;
     this.fillColor = fillColor;
     this.defaultStrokeColor = "black";
-    this.highlightColor = "gray";
+    this.highlightColor = color(100, 100, 100, 50);
     this.showStroke = false;
   }
 
@@ -34,7 +35,7 @@ class Ball {
   }
 
   changeSize(byHowMuch) {
-    this.r = constrain(this.r + random(-byHowMuch, byHowMuch), 2, 10);
+    this.r = constrain(this.r + random(-byHowMuch, byHowMuch), 2, 30);
   }
 
   contains(px, py) {
@@ -51,11 +52,11 @@ class Ball {
   }
 
   highlight() {
-    this.strokeColor = this.highlightColor;
+    this.fillColor = this.highlightColor;
   }
 
   deHighlight() {
-    this.strokeColor = this.defaultStrokeColor;
+    this.fillColor = this.origColor;
   }
 
   isOnBody(mask) {
@@ -73,7 +74,7 @@ class Ball {
 class FlickerBall extends Ball {
   respond(active) {
     super.respond(active);
-    this.fillColor = color(0, 0, 0, 100);
+    // this.fillColor = color(0, 0, 0, 100);
     this.changeSize(3);
   }
 }

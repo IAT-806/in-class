@@ -3,7 +3,7 @@ let balls = [];
 // numBalls is written in camelCase.
 // you could also write in camel_case
 // this is the number of balls that you want to create.
-let numBalls = 2500;
+let numBalls = 10000;
 // no color variables, no position variables, they are all defined within the class.
 
 let bodySegmentation;
@@ -15,7 +15,7 @@ let options = {
 };
 
 async function setup() {
-  createCanvas(640, 480);
+  createCanvas(1280, 960);
   for (let i = 0; i < numBalls; i++) {
     balls.push(createRandomBall());
   }
@@ -24,7 +24,7 @@ async function setup() {
 
   // Create the video
   video = createCapture(VIDEO);
-  video.size(640, 480);
+  video.size(width, height);
   video.hide();
 
   bodySegmentation.detectStart(video, gotResults);
@@ -32,7 +32,7 @@ async function setup() {
 
 function draw() {
   background(120);
-
+  image(video, 0, 0);
   for (let ball of balls) {
     let onBody = segmentation && ball.isOnBody(segmentation.mask);
 
